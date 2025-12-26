@@ -1,0 +1,18 @@
+header.keykap-header,
+aside.keykap-sidebar {
+    position: fixed;
+    background-color: #201828c0;
+    backdrop-filter: blur(32px);
+    z-index: 16; display: flex;
+}
+header.keykap-header {
+    top: 0px; left: 0px; right: 0px;
+    padding: 8px 16px; gap: 8px;
+}
+aside.keykap-sidebar {}
+@media (prefers-color-scheme: light) {
+    header.keykap-header,
+    aside.keykap-sidebar {
+        background-color: #ffffffc0;
+    }
+}
