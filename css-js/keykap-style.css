@@ -1,0 +1,116 @@
+html {font-size: 16px;}
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #100c14;
+    overflow-x: hidden;
+}
+::placeholder, * {
+    font-family: arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ffffff;
+}
+h1 {font-size: 1.5rem; line-height: 2rem;}
+p, h2, h1, form, button, a.button {flex-shrink: 0; margin: 0px;}
+div, nav, a, button, form {position: relative;}
+a, button, form {display: flex;}
+.hidden {display: none !important;}
+video, img {object-fit: fill; display: block;}
+
+button, a.button {
+    line-height: 1rem;
+    text-decoration: none;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem; gap: 0.5rem;
+    outline: none; border: none;
+    border-radius: 1rem;
+    background-color: #8060a080;
+    transition: 0.1s background-color;
+    -webkit-user-select: none;
+    user-select: none;
+}
+button.flat, a.button.flat,
+.flat-buttons button,
+.flat-buttons a.button {
+    background-color: #8060a000;
+}
+button *, a * {pointer-events: none;}
+button img, a.button img,
+button svg, a.button svg {
+    width: 1rem; height: 1rem;
+    fill: currentColor;
+}
+button:hover, button:focus-visible,
+a.button:hover, a.button:focus-visible {
+    background-color: #8060a0c0;
+}
+button:active, a.button:active {
+    background-color: #8060a040;
+}
+
+textarea, div[contenteditable], input {
+    width: 100%; resize: none;
+    padding: 0px; outline: none; border: none;
+    background-color: #00000000;
+}
+div[contenteditable] {word-break: break-word; white-space: break-spaces;}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 116px; height: 0.5rem;
+    padding: 0px; margin: 0px; border: none;
+    border-radius: 0.25rem;
+    background-color: #8060a080;
+}
+::-moz-range-thumb {
+    appearance: none;
+    border: none; border-radius: 0.5rem;
+    width: 1rem; height: 1rem;
+    background-color: #8060a0;
+}
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none; border-radius: 0.5rem;
+    width: 1rem; height: 1rem;
+    background-color: #8060a0;
+}
+
+::-webkit-scrollbar, ::-webkit-scrollbar-button, ::-webkit-scrollbar-corner {
+    width: 1rem;
+    height: 1rem;
+    background: #00000000;
+}
+::-webkit-scrollbar-button:vertical:decrement {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='0.5rem' height='0.25rem' fill='rgb(128,96,160)'><polygon points='0,4 8,4 4,0'/></svg>") center / 0.5rem 0.25rem no-repeat;
+}
+::-webkit-scrollbar-button:vertical:increment {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='0.5rem' height='0.25rem' fill='rgb(128,96,160)'><polygon points='0,0 8,0 4,4'/></svg>") center / 0.5rem 0.25rem no-repeat;
+}
+::-webkit-scrollbar-button:horizontal:decrement {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='0.25rem' height='0.5rem' fill='rgb(128,96,160)'><polygon points='0,4 4,0 4,8'/></svg>") center / 0.25rem 0.5rem no-repeat;
+}
+::-webkit-scrollbar-button:horizontal:increment {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='0.25rem' height='0.5rem' fill='rgb(128,96,160)'><polygon points='0,0 0,8 4,4'/></svg>") center / 0.25rem 0.5rem no-repeat;
+}
+::-webkit-scrollbar-button:decrement:end,
+::-webkit-scrollbar-button:increment:start {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    border: 0.25rem solid #00000000;
+    border-radius: 0.5rem;
+    background: #8060a0;
+    background-clip: content-box;
+}
+
+@media (prefers-color-scheme: light) {
+    ::placeholder, * {color: #000000;}
+    body {background-color: #d8c0f0;}
+    img.icon {filter: invert(100%);}
+}
